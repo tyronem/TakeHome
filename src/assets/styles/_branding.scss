@@ -1,11 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap');
+
 :root {
   /**
     Colors
   */
-  --color-text: #222;
-  --color-background: white;
+
+  --tardis-blue: #003b6f;
+  --color-text: white;
+  --color-background: var(--tardis-blue);
   --color-light: silver;
   --color-primary: #7950f2;
+  --color-orange: #FFA62B;
 
   /**
     Spacing and units
@@ -17,13 +22,6 @@
     Fonts
   */
   --font-family-sans-serif:
-    system,
-    -apple-system,
-    ".SFNSText-Regular",
-    "San Francisco",
-    "Roboto",
-    "Segoe UI",
-    "Helvetica Neue",
-    "Lucida Grande",
+    "Oswald",
     sans-serif;
 }
