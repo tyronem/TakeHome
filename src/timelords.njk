@@ -1,0 +1,30 @@
+---
+pagination:
+    data: doctors
+    size: 1
+    alias: doctor
+    addAllPagesToCollections: true
+layout: docs.njk
+tags: timelords
+permalink: "doctor-{{ doctor.incarnation | slugify }}.html"
+templateEngineOverride: njk, md 
+eleventyComputed: {
+    title: "{{ doctor.incarnation }}",
+    id: "{{ doctor.id }}",
+    primaryActorID: "{{ doctor.primaryActorID }}",
+    link: "{{ doctor.links[0].href }}",
+    series: "{{ doctor.series }}",
+    eleventyNavigation: {
+        key: "{{ doctor.incarnation }}",
+        parent:  "Doctors"
+  }
+}
+---
+<h1>{{ title }}</h1>
+<ul>
+    <li>id: {{ id }}</li>
+    <li>Primary Actor ID: {{ primaryActorID }}</li>
+    {# <li>{{ link }}</li> #}
+    {# <script> console.log('{{ series | dump | safe }}')</script> #}
+    {# <li>series {{ series}}</li> #}
+</ul>

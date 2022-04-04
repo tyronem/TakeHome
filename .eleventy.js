@@ -130,6 +130,6 @@ module.exports = function (eleventyConfig) {
       layouts: 'assets/views/layouts',
       data: 'data',
     },
-    templateFormats: ['njk', 'md', '11ty.js'],
+    templateFormats: ['html', 'njk', 'md', '11ty.js'],
   };
 };

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ title }}</title>
+
+    <link rel="stylesheet" href="{{ '../assets/styles/styles.css' | url }}" />
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+
+    {% metagen
+        title=title or metadata.title
+    %}
+
+  </head>
+  <body>
+    <a class="visually-hidden" href="#main">Skip to content</a>
+
+    {# Site header with navigation #}
+    <header>
+      {% include "navigation.njk" %}
+    </header>
+
+    {# Main content #}
+    <main id="main" tabindex="-1">
+    {{ content | safe }}
+
+    <nav aria-labelledby="pagination-label">
+    <h4 id="pagination-label">Other Doctors</h4>
+    <p><em>(this should be on a navigation menu)</em></p>
+    <ul>
+        <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}</li>
+            {%- for pageEntry in pagination.pages %}
+                {# <script> console.log('{{ pageEntry | dump | safe }}')</script> #}
+                {# <script> console.log('{{ pagination.hrefs | dump | safe }}')</script> #}
+                <li><a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page" class="active" {% endif %}>{{pageEntry.incarnation}} </a></li>
+            {%- endfor %}
+        <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% else %}Next{% endif %}</li>
+    </ul>
+    </nav>
+    </main>
+
+    <script src="../assets/scripts/main.js" defer></script>
+  </body>
+</html>

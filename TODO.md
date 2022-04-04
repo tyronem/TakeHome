@@ -16,9 +16,13 @@ Let me know if you have any questions. The above is left purposely vague to let 
 * https://www.11ty.dev/docs/data-computed/#using-javascript
 * https://11ty.rocks/
 * https://11ty.rocks/tips/
+* https://github.com/public-apis/public-apis
+* https://www.11ty.dev/docs/pagination/nav/
+* https://www.11ty.dev/docs/filters/slugify
+* https://www.11ty.dev/docs/permalinks/
 
-STAPI
-* https://leonawicz.github.io/rtrek/articles/memory-alpha.html#:~:text=The%20rtrek%20package%20includes%20some,Star%20Trek%20API%20(STAPI).
+
+
 
 
 supercharge git video
@@ -26,3 +30,10 @@ supercharge git video
 
 Very Dark Blue (#060855), Dark Blue (#0202B1), Vivid Orange (#FFA62B), Very Dark Blue (#010078), Vivid Blue (#0455EB) for a variety of TARDIS blues, plus a regeneration orange thrown in for splash.
 * https://acrossthepondtv.wordpress.com/2015/11/25/color-schemes-of-your-favorite-show/
+
+## Keep for later
+* Netlify: https://app.netlify.com/teams/tyronem/builds
+* Fetch: https://www.youtube.com/watch?v=cuEtnrL9-H0 
+* My github for this project: https://github.com/tyronem/TakeHome
+
+

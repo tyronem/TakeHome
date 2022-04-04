@@ -1,10 +1,13 @@
+---
+dumb: My page title is dumb
+---
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>{{ title }}</title>
+    <title>{{ settings.siteName }}</title>
 
     <link rel="stylesheet" href="{{ '/assets/styles/styles.css' | url }}" />
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
@@ -25,6 +28,27 @@
     {# Main content #}
     <main id="main" tabindex="-1">
     {{ content | safe }}
+
+    <h2>Links?</h2>
+    <p><a href="/doctor-first-doctor.html">First Doctor</a></p>
+
+
+    {# {% for doctor in doctors %}
+      <ul>        
+        <li>ID: {{ doctor.id }}</li>
+        <li>{{ doctor.incarnation }}</li>
+        <li>{{ doctor.links[0].href }}</li>
+      </ul>
+      {% endfor %} #}
+
+        {# <h3>Doctor Data</h3>
+        <ul>
+            <li>title: {{ title }} </li>
+            <li>id: {{ id }}</li>
+            <li>primaryActorID: {{ primaryActorID }}</li>
+            <li>link: {{ link }}</li>
+        </ul> #}
+
     </main>
 
     <script src="/assets/scripts/main.js" defer></script>

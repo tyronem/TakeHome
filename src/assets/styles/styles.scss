@@ -16,6 +16,10 @@ body {
 
 a {
   color: var(--color-orange);
+  &.active[aria-current='page'] {
+    color: darken(#FFA62B, 20%);
+    pointer-events: none;
+  }
 }
 
 #main {
